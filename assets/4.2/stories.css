@@ -1,0 +1,105 @@
+[cr-stories-container] {
+    overflow: visible !important
+}
+
+[cr-stories-container] :not(a, input, textarea, select, button, .widget-before-after, [cr-video-button], [cr-slider-previous], [cr-slider-next], [cr-slider-page], [cr-stories-previous], [cr-stories-next], [cr-stories-page], [cr-stories-pause], [cr-stories-resume], [cr-spoiler-toggle], [cr-hover], .macros-map) {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none
+}
+
+[cr-stories-container]>.swiper-wrapper {
+    margin: 0 auto;
+    display: flex
+}
+
+.screen-xs [cr-stories-container]>.swiper-wrapper {
+    width: 100% !important
+}
+
+[cr-stories-container]>.swiper-wrapper>.swiper-slide {
+    width: 100%;
+    flex-shrink: 0;
+    position: relative
+}
+
+[cr-stories-container]>.swiper-wrapper>.swiper-slide+.swiper-slide {
+    margin-left: 30px
+}
+
+.screen-xs [cr-stories-container]>.swiper-wrapper>.swiper-slide+.swiper-slide {
+    margin-left: 0
+}
+
+[cr-stories-container].swiper-mode>.swiper-wrapper {
+    margin: 0
+}
+
+[cr-stories-container].swiper-mode .swiper-slide {
+    margin-left: 0 !important
+}
+
+[cr-stories-container] [cr-stories-highlight] {
+    position: relative;
+    z-index: 1 !important;
+    pointer-events: none
+}
+
+[cr-stories-container] [cr-stories-highlight]+.passive-conts-overlay {
+    z-index: 2;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer
+}
+
+[cr-stories-container] [cr-stories-highlight].is-active {
+    pointer-events: auto
+}
+
+[cr-stories-container] [cr-stories-highlight].is-active+.passive-conts-overlay {
+    display: none
+}
+
+[cr-stories-container] .highlight-cont-wrapper>.cont {
+    display: none
+}
+
+[cr-stories-container] .highlight-cont-wrapper>.cont:first-of-type {
+    display: block
+}
+
+[cr-stories-frame] {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 3
+}
+
+.screen-xs [cr-stories-frame] {
+    left: 0;
+    margin: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    height: calc(var(--vh, 1vh) * 100) !important
+}
+
+[cr-stories-next] {
+    cursor: pointer;
+    position: relative;
+    z-index: 220
+}
+
+[cr-stories-previous] {
+    cursor: pointer;
+    position: relative;
+    z-index: 220
+}
+
+[cr-stories-page] {
+    cursor: pointer;
+    position: relative;
+    z-index: 220
+}
